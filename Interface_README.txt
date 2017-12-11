@@ -2,7 +2,8 @@
 MES-Praktikum WS 2017/18
 
 Client-Database Interface:
-Via Query-String des HTTP-Requests
+Via Query-String des HTTP-Requests an /cgi-bin/DB_RequestHandler.py
+Zum Testen: localhost:8000/cgi-bin/DB_RequestHandler.py?"QueryString"
 Funktion:       Query-String:
 getAllTools     ?command=getAllTools
 queryToolByID   ?command=queryToolByID&id="beliebigeID"
