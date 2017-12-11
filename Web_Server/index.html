@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Get data as JSON from a Python file on the server.</h2>
+
+<p>Choose Index:</p>
+<input type="number" name="id_selector" id="id_selector" min="0" max="8">
+<button type="button" onclick="dbInteraction('getAllTools')">Get All Tools!</button>
+<button type="button" onclick="dbInteraction('queryToolByID')">Get Tool!</button>
+
+
+<p id="tools"></p>
+<p id="ID"></p>
+
+<script>
+function dbInteraction(command) {
+var com = command
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText);
+        document.getElementById("tools").innerHTML = myObj;
+    }
+};
+xmlhttp.open("GET", "cgi-bin/DB_RequestHandler.py?command="+com+"&id="+ document.getElementById("id_selector").value, true);
+xmlhttp.send();
+}
+</script>
+
+</body>
+</html>
