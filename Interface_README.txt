@@ -20,7 +20,13 @@ getUsage          ?command=getUsage[&id="beliebigeID"[&timespan="week/month/year
 Daten werden im JSON-Format zurückgegeben!
 
 getAllTools:
-Gibt eine vollständige Liste aller eigetragenen Werkzeuge aus.
+Gibt eine vollständige Liste aller in der Tabelle "tools" eigetragenen Werkzeuge aus.
+
+getAvailableTools:
+Gibt eine Liste aller verfügbaren Werkzeuge aus.
+
+getToolsInUse:
+Gibt eine Liste aller in Benutzung befindlicher Werkzeuge aus.
 
 queryToolByID(id):
 Gibt den Eintrag mit der entsprechenden (id) zurück.
