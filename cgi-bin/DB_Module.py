@@ -150,9 +150,3 @@ c = conn.cursor()
 #c.execute('''CREATE TABLE usage
 #         (id INTEGER, start TEXT, duration INTEGER)''')
 # =============================================================================
-
-#i = 0
-#while i < 7: 
-#     takeTool(i)
-#     returnTool(i)
-#     i += 1
